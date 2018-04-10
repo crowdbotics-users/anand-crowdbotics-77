@@ -1,0 +1,16 @@
+
+{
+  "name": "anand-crowdbotics-77",
+  "description": "This is repository for web app developed with django  and with features ",
+  "repository": "https://github.com/crowdbotics-users/anand-crowdbotics-77",
+  "keywords": ['web'],
+  "env": {
+    "DEBUG_COLLECTSTATIC": "1" 
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "scripts": {
+    "postdeploy": "python manage.py migrate --noinput"
+  }
+}
