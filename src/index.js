@@ -5,7 +5,8 @@ import {AppService} from './app/services/AppService';
 import {App} from './app/containers/App';
 import {Header} from './app/components/Header/Header';
 import {MainSection} from './app/components/MainSection/MainSection';
-import {Auth} from './app/components/Auth/Auth';
+import {Register} from './app/components/Register/Register';
+import {Login} from './app/components/Login/Login';
 import {Home} from './app/components/Home/Home';
 import 'angular-ui-router';
 import routesConfig from './routes';
@@ -19,5 +20,6 @@ angular
   .component('app', App)
   .component('headerComponent', Header)
   .component('mainSection', MainSection)
-  .component('auth', Auth)
+  .component('login', Login)
+  .component('register', Register)
   .component('home', Home);
