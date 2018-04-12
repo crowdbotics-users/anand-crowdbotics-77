@@ -14,8 +14,16 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/register',
       component: 'register'
     })
-    .state('home', {
-      url: '/home',
-      component: 'home'
+    .state('gene', {
+      url: '/gene',
+      component: 'gene'
+    })
+    .state('direct', {
+      url: '/gene/direct',
+      component: 'directGene'
+    })
+    .state('indirect', {
+      url: '/gene/indirect',
+      component: 'indirectGene'
     });
 }

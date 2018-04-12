@@ -3,12 +3,18 @@
 
     <md-toolbar class="menu">
       <div class="md-toolbar-tools">
-        <img class="header-logo" src="http://skydeck.berkeley.edu/wp-content/uploads/BioXplor-300x300.png" >
+        <img class="header-logo" src="../../../../assets/images/bioxplorLogo.png" ng-click="$ctrl.goBack()">
 
         <span flex></span>
-        <md-button class="md-raised" aria-label="My Account" ng-if="$ctrl.user">
-          My Account
-        </md-button>
+        <div ng-if="$ctrl.authService.user">
+          <md-button class="md-raised" aria-label="My Account" ng-if="$ctrl.$state.current.url.indexOf('gene') == -1">
+            My Account
+          </md-button>
+          <h3 class="rightItem" ng-if="$ctrl.$state.current.url.indexOf('gene') > -1">
+            {{$ctrl.authService.user.email}}
+          </h3>
+        </div>
+
       </div>
     </md-toolbar>
   </md-content>
