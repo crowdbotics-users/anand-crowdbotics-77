@@ -18,12 +18,16 @@ class DirectGeneController {
 class IndirectGeneController {
   constructor() {
     this.buttonRipple = COLORS.buttonRipple;
-    this.target1 = [{name: 'Sox 17'}];
-    this.bridge1 = [{name: 'Biological Processes'}];
-    this.bridge2 = [{name: 'Cellular Components'}];
-    this.bridge3 = [{name: 'Molecular Functions'}];
-    this.indication1 = [{name: 'Macur Degeneration'}];
-    this.indication2 = [{name: 'Dibetic Ratinopathy'}];
+    this.target = [{name: 'Sox 17'}];
+    this.bridge = [{name: 'Biological Processes'}, {name: 'Cellular Components'}, {name: 'Molecular Functions'}];
+    this.indication = [{name: 'Macur Degeneration'}, {name: 'Dibetic Ratinopathy'}];
+    this.targetFilters = [{}];
+    this.bridgeFilters = [{}];
+    this.indicationFilters = [{}];
+  }
+
+  addFilter(filter) {
+    this[filter].push({});
   }
 }
 

@@ -5,73 +5,46 @@
       <div layout="row" layout-align="space-around" class="add-more">
         <div layout-align="center center">
           <div class="sub-title">Target</div>
-          <md-input-container class="select">
-            <md-select ng-model="$ctrl.selectedTarget1">
+          <md-input-container class="select" ng-repeat="filter in $ctrl.targetFilters">
+            <md-select ng-model="$ctrl['selectedTarget_' + $index]">
               <md-option><em>None</em></md-option>
-              <md-option ng-repeat="target in $ctrl.target1" ng-value="target.name">
+              <md-option ng-repeat="target in $ctrl.target" ng-value="target.name">
                 {{target.name}}
               </md-option>
             </md-select>
           </md-input-container>
 
-          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}">
+          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}" ng-click="$ctrl.addFilter('targetFilters')">
             Add more
           </md-button>
         </div>
         <div layout-align="center center">
           <div class="sub-title">Bridge</div>
-          <md-input-container class="select">
-            <md-select ng-model="$ctrl.selectedBridge1">
+          <md-input-container class="select" ng-repeat="filter in $ctrl.bridgeFilters">
+            <md-select ng-model="$ctrl['selectedBridge_' + $index]">
               <md-option><em>None</em></md-option>
-              <md-option ng-repeat="bridge in $ctrl.bridge1" ng-value="bridge.name">
+              <md-option ng-repeat="bridge in $ctrl.bridge" ng-value="bridge.name">
                 {{bridge.name}}
               </md-option>
             </md-select>
           </md-input-container>
 
-          <md-input-container class="select">
-            <md-select ng-model="$ctrl.selectedBridge2">
-              <md-option><em>None</em></md-option>
-              <md-option ng-repeat="bridge in $ctrl.bridge2" ng-value="bridge.name">
-                {{bridge.name}}
-              </md-option>
-            </md-select>
-          </md-input-container>
-
-          <md-input-container class="select">
-            <md-select ng-model="$ctrl.selectedBridge3">
-              <md-option><em>None</em></md-option>
-              <md-option ng-repeat="bridge in $ctrl.bridge3" ng-value="bridge.name">
-                {{bridge.name}}
-              </md-option>
-            </md-select>
-          </md-input-container>
-
-          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}">
+          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}" ng-click="$ctrl.addFilter('bridgeFilters')">
             Add more
           </md-button>
         </div>
         <div>
           <div class="sub-title">Indication</div>
-          <md-input-container class="select">
-            <md-select ng-model="$ctrl.selectedIndication1">
+          <md-input-container class="select" ng-repeat="filter in $ctrl.indicationFilters">
+            <md-select ng-model="$ctrl['selectedIndication_' + $index]">
               <md-option><em>None</em></md-option>
-              <md-option ng-repeat="indication in $ctrl.indication1" ng-value="indication.name">
+              <md-option ng-repeat="indication in $ctrl.indication" ng-value="indication.name">
                 {{indication.name}}
               </md-option>
             </md-select>
           </md-input-container>
 
-          <md-input-container class="select">
-            <md-select ng-model="$ctrl.selectedIndication2">
-              <md-option><em>None</em></md-option>
-              <md-option ng-repeat="indication in $ctrl.indication2" ng-value="indication.name">
-                {{indication.name}}
-              </md-option>
-            </md-select>
-          </md-input-container>
-
-          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}">
+          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}" ng-click="$ctrl.addFilter('indicationFilters')">
             Add more
           </md-button>
         </div>
