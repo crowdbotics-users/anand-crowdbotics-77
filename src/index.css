@@ -45,7 +45,8 @@ body{
 
 .md-select-value{
   border: 1px solid rgba(0,0,0,0.12);
-  width: 100%
+  width: 100%;
+  height: 40px;
 }
 
 .home .indirect-card{
@@ -104,6 +105,12 @@ body{
   font-size: 15px;
 }
 
+.home .progress{
+  width: 30%;
+  text-align: center;
+  font-weight: 400;
+}
+
 .menu{
   background-color: white !important;
   overflow-y: hidden;
@@ -125,6 +132,10 @@ body{
 
 .center{
   text-align: center;
+}
+
+.md-mode-determinate, .md-mode-determinate > div {
+    height: 17px !important;
 }
 
 @-webkit-keyframes fade-in {

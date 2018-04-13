@@ -5,8 +5,8 @@
       <div layout="row" layout-align="space-around" class="add-more">
         <div layout-align="center center">
           <div class="sub-title">Target</div>
-          <md-input-container class="select" ng-repeat="filter in $ctrl.targetFilters">
-            <md-select ng-model="$ctrl['selectedTarget_' + $index]">
+          <md-input-container class="select">
+            <md-select ng-model="$ctrl.selectedTarget" ng-change="$ctrl.onSelect()">
               <md-option><em>None</em></md-option>
               <md-option ng-repeat="target in $ctrl.target" ng-value="target.name">
                 {{target.name}}
@@ -14,29 +14,26 @@
             </md-select>
           </md-input-container>
 
-          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}" ng-click="$ctrl.addFilter('targetFilters')">
-            Add more
-          </md-button>
         </div>
         <div layout-align="center center">
           <div class="sub-title">Bridge</div>
           <md-input-container class="select" ng-repeat="filter in $ctrl.bridgeFilters">
-            <md-select ng-model="$ctrl['selectedBridge_' + $index]">
+            <md-select ng-model="$ctrl.selectedBridge[$index]" ng-change="$ctrl.onSelect('bridge', 'selectedBridge', $index)">
               <md-option><em>None</em></md-option>
-              <md-option ng-repeat="bridge in $ctrl.bridge" ng-value="bridge.name">
+              <md-option ng-repeat="bridge in $ctrl.bridge" ng-value="bridge.name" ng-disabled="bridge.disabled">
                 {{bridge.name}}
               </md-option>
             </md-select>
           </md-input-container>
 
-          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}" ng-click="$ctrl.addFilter('bridgeFilters')">
+          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}" ng-click="$ctrl.addFilter('bridgeFilters')" ng-if="!$ctrl.stopAddMore">
             Add more
           </md-button>
         </div>
         <div>
           <div class="sub-title">Indication</div>
-          <md-input-container class="select" ng-repeat="filter in $ctrl.indicationFilters">
-            <md-select ng-model="$ctrl['selectedIndication_' + $index]">
+          <md-input-container class="select">
+            <md-select ng-model="$ctrl.selectedIndication" ng-change="$ctrl.onSelect()">
               <md-option><em>None</em></md-option>
               <md-option ng-repeat="indication in $ctrl.indication" ng-value="indication.name">
                 {{indication.name}}
@@ -44,17 +41,19 @@
             </md-select>
           </md-input-container>
 
-          <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}" ng-click="$ctrl.addFilter('indicationFilters')">
-            Add more
-          </md-button>
         </div>
       </div>
 
     </md-card-content>
     <md-card-footer layout="column" layout-align="center center">
-      <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}">
+      <md-button class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}" ng-click="$ctrl.submit()">
         Go
       </md-button>
+
     </md-card-footer>
   </md-card>
+  <div class="progress">
+    <p>{{$ctrl.result}} out of {{$ctrl.total}}</p>
+    <md-progress-linear md-mode="determinate" value="{{$ctrl.progress}}"></md-progress-linear>
+  </div>
 </div>

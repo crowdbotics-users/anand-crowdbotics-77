@@ -1,4 +1,5 @@
 import {COLORS} from '../../constants/StylesConstants';
+import _ from 'underscore';
 
 class GeneController {
   constructor() {
@@ -16,18 +17,38 @@ class DirectGeneController {
 }
 
 class IndirectGeneController {
-  constructor() {
+  constructor($log, $timeout) {
+    this.console = $log;
+    this.timeout = $timeout;
     this.buttonRipple = COLORS.buttonRipple;
     this.target = [{name: 'Sox 17'}];
     this.bridge = [{name: 'Biological Processes'}, {name: 'Cellular Components'}, {name: 'Molecular Functions'}];
     this.indication = [{name: 'Macur Degeneration'}, {name: 'Dibetic Ratinopathy'}];
-    this.targetFilters = [{}];
     this.bridgeFilters = [{}];
-    this.indicationFilters = [{}];
+    this.selectedBridge = [];
+    this.result = 0;
+    this.total = 2987453;
+    this.stopAddMore = false;
   }
 
-  addFilter(filter) {
-    this[filter].push({});
+  addFilter() {
+    this.bridgeFilters.push({});
+    this.stopAddMore = this.bridgeFilters.length === this.bridge.length;
+  }
+
+  onSelect(filter, list) {
+    this.result = Math.round(Math.random() * 2987453);
+    this.progress = Math.round((this.result / this.total) * 100);
+    this.timeout(() => {
+      this[filter] = _.map(this[filter], elem => {
+        elem.disabled = this[list].includes(elem.name);
+        return elem;
+      });
+    });
+  }
+
+  submit() {
+    return null;
   }
 }
 
