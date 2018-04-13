@@ -2,21 +2,20 @@
   <div class="title">
     Indication Expansion
   </div>
-  <md-card layout-align="center center" class="card">
+  <md-card layout-align="center center" class="card login">
     <md-card-content>
-      <md-input-container class="md-block">
-        <label>Email address</label>
-        <input ng-model="email">
+      <md-input-container md-no-float class="md-block">
+        <input type="email" ng-model="email" placeholder="Your email address">
       </md-input-container>
-      <md-input-container class="md-block">
-        <label>Password</label>
-        <input ng-model="password">
+      <md-input-container md-no-float class="md-block">
+        <input type="password" ng-model="password" placeholder="Your password">
       </md-input-container>
 
     </md-card-content>
     <md-card-footer layout="column" layout-align="center center">
-      <md-button class="md-raised" aria-label="Sign up" ng-click="$ctrl.login()">
-        Login
+      <md-button class="md-raised" aria-label="Log in" ng-click="$ctrl.login()">
+        <img src="../../../../assets/icons/lock-icon.svg" style="color: white; width: 31px; float: left; font-weight: bold" />
+        Log in
       </md-button>
       <div class="pointer" ui-sref="register">
         Do you want to Register?

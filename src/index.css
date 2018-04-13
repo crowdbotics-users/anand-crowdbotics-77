@@ -27,15 +27,60 @@ body{
   -webkit-animation-duration: 0.5s;
   animation-name: fade-in;
   animation-duration: 0.5s;
+  min-width: 500px;
+}
+
+.home .card.login input{
+  height: 80px;
+  font-size: 24px;
+  border-width: 2px;
+  border-radius: 7px;
+  padding-left: 20px;
+}
+
+.home .card.login md-card-footer{
+  width: 100%;
+  padding: 0 30px;
+}
+
+.home .card.login .md-raised{
+  height: 80px;
+  font-size: 24px;
+  border-width: 2px;
+  border-radius: 7px;
+  padding-left: 20px;
+  padding-right: 31px;
+  width: 100%;
+  background-color: #00B9FF;
+  color: white;
 }
 
 .home .card md-card-content{
   width: 100%;
   overflow: hidden;
   overflow-y: scroll;
+  padding: 0 30px;
 }
+
+.home .register input{
+  background-color: white;
+  padding-left: 10px;
+  box-shadow: 0 3px 1px 0px gray;
+  height: 40px;
+}
+
+.home .register label{
+  padding-left: 10px !important;
+}
+
+.home .register .md-raised{
+  background-color: #00B9FF;
+  color: white;
+}
+
 .pointer{
   cursor: pointer;
+  text-align: center;
 }
 
 .md-input{
