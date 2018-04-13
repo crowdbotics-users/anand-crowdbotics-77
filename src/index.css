@@ -12,10 +12,113 @@ body{
   width: 100%;
   height: 80px;
   background: white;
+  z-index: 1000;
+  padding-top: 15px;
+}
+
+.header .rightItem{
+  color: black;
+}
+
+.home .card{
+  padding: 40px 0;
+  margin: 30px;
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  min-width: 500px;
+}
+
+.home .card.login input{
+  height: 80px;
+  font-size: 24px;
+  border-width: 2px;
+  border-radius: 7px;
+  padding-left: 20px;
+}
+
+.home .card.login md-card-footer{
+  width: 100%;
+  padding: 0 30px;
+}
+
+.home .card.login .md-raised{
+  height: 80px;
+  font-size: 24px;
+  border-width: 2px;
+  border-radius: 7px;
+  padding-left: 20px;
+  padding-right: 31px;
+  width: 100%;
+  background-color: #00B9FF;
+  color: white;
+}
+
+.home .card md-card-content{
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0 30px;
+}
+
+.home .register input{
+  background-color: white;
+  padding-left: 10px;
+  box-shadow: 0 3px 1px 0px gray;
+  height: 40px;
+}
+
+.home .register label{
+  padding-left: 10px !important;
+}
+
+.home .register .md-raised{
+  background-color: #00B9FF;
+  color: white;
+}
+
+.pointer{
+  cursor: pointer;
+  text-align: center;
+}
+
+.md-input{
+  border: 1px solid rgba(0,0,0,0.12) !important;
+  width: 100%
+}
+
+.md-select-value{
+  border: 1px solid rgba(0,0,0,0.12);
+  width: 100%;
+  height: 40px;
+}
+
+.home .indirect-card{
+  width: 70%;
+}
+
+.home .indirect-card .md-select-value{
+  width: 70%;
+  text-align: center;
 }
 
 .home .title{
   font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.home .sub-title{
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.home .select{
+  display: block;
   margin-bottom: 40px;
 }
 
@@ -24,13 +127,43 @@ body{
   padding: 0;
 }
 
+.home .gene{
+  width: 40%;
+}
+
+.home .md-raised{
+  width: 200px;
+  text-transform: none;
+  font-size: 18px;
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+}
+
+.home .add-more > div {
+  width: 30%;
+}
+
+.home .add-more .md-raised{
+  width: 50px;
+  text-transform: none;
+  font-size: 15px;
+}
+
+.home .progress{
+  width: 30%;
+  text-align: center;
+  font-weight: 400;
+}
+
 .menu{
   background-color: white !important;
   overflow-y: hidden;
 }
 
 .header-logo{
-  width: 130px;
+  width: 110px;
+  cursor: pointer;
 }
 
 .main{
@@ -44,4 +177,38 @@ body{
 
 .center{
   text-align: center;
+}
+
+.md-mode-determinate, .md-mode-determinate > div {
+    height: 17px !important;
+}
+
+@-webkit-keyframes fade-in {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fade-in {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
