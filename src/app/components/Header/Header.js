@@ -7,9 +7,20 @@ class HeaderController {
   }
 
   goBack() {
-    const states = ['direct', 'indirect'];
-    if (states.includes(this.$state.current.name)) {
-      this.$state.go('gene');
+    switch (this.$state.current.name) {
+      case 'direct':
+      case 'indirect': {
+        this.$state.go('gene');
+        break;
+      }
+      case 'search': {
+        const route = this.$state.params.from === 'direct' ? 'direct' : 'indirect';
+        this.$state.go(route);
+        break;
+      }
+      default: {
+        return 0;
+      }
     }
   }
 }

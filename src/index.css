@@ -16,8 +16,52 @@ body{
   padding-top: 15px;
 }
 
-.header .rightItem{
+.header .right-item{
   color: black;
+  display: inline-block;
+}
+
+.header .button{
+  border: 2px solid #cbcbcb;
+  width: 120px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 5px;
+  color: dodgerblue;
+}
+
+.header .boxes{
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  min-height: 0;
+  min-width: 0;
+}
+
+.header .boxes.green{
+  border: 2px solid green;
+  color: green;
+}
+
+.header .boxes.red{
+  border: 2px solid red;
+  color: red;
+}
+
+.header .boxes.blue{
+  border: 2px solid blue;
+  color: blue;
+}
+
+.header .boxes.search{
+  border: 2px solid #cbcbcb;
+  padding-top: 5px;
+}
+
+.header .boxes.search img{
+  width: 17px !important
 }
 
 .home .card{
@@ -53,6 +97,7 @@ body{
   width: 100%;
   background-color: #00B9FF;
   color: white;
+  display: inline-block;
 }
 
 .home .card md-card-content{

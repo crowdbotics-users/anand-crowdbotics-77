@@ -25,5 +25,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('indirect', {
       url: '/gene/indirect',
       component: 'indirectGene'
+    })
+    .state('search', {
+      url: '/search/{from}',
+      component: 'search'
     });
 }

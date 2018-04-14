@@ -8,16 +8,22 @@ class GeneController {
 }
 
 class DirectGeneController {
-  constructor() {
+  constructor($state) {
+    this.state = $state;
     this.buttonRipple = COLORS.buttonRipple;
     this.genes = [{name: 'AADACL3'}, {name: 'AADACL4'}, {name: 'ACADM'}, {name: 'ACTL8'}, {name: 'ADGRL2'}, {name: 'ADPRHL2'}, {name: 'AMPD2'}, {name: 'ARID1A'}, {name: 'ATXN7L2'}, {name: 'AZIN2'}, {name: 'BCAS2'}, {name: 'BCL10'}];
     this.mechanisms = [{name: 'AADACL3'}, {name: 'AADACL4'}, {name: 'ACADM'}, {name: 'ACTL8'}, {name: 'ADGRL2'}, {name: 'ADPRHL2'}, {name: 'AMPD2'}, {name: 'ARID1A'}, {name: 'ATXN7L2'}, {name: 'AZIN2'}, {name: 'BCAS2'}, {name: 'BCL10'}];
     this.models = [{name: 'AADACL3'}, {name: 'AADACL4'}, {name: 'ACADM'}, {name: 'ACTL8'}, {name: 'ADGRL2'}, {name: 'ADPRHL2'}, {name: 'AMPD2'}, {name: 'ARID1A'}, {name: 'ATXN7L2'}, {name: 'AZIN2'}, {name: 'BCAS2'}, {name: 'BCL10'}];
   }
+
+  submit() {
+    this.state.go('search', {from: 'direct'});
+  }
 }
 
 class IndirectGeneController {
-  constructor($log, $timeout) {
+  constructor($log, $timeout, $state) {
+    this.state = $state;
     this.console = $log;
     this.timeout = $timeout;
     this.buttonRipple = COLORS.buttonRipple;
@@ -48,7 +54,7 @@ class IndirectGeneController {
   }
 
   submit() {
-    return null;
+    this.state.go('search', {from: 'indirect'});
   }
 }
 

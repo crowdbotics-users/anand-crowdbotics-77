@@ -8,6 +8,7 @@ import {MainSection} from './app/components/MainSection/MainSection';
 import {Register} from './app/components/Register/Register';
 import {Login} from './app/components/Login/Login';
 import {Gene, DirectGene, IndirectGene} from './app/components/Gene/Gene';
+import {Search} from './app/components/Search/Search';
 import 'angular-ui-router';
 import routesConfig from './routes';
 
@@ -24,4 +25,5 @@ angular
   .component('register', Register)
   .component('gene', Gene)
   .component('directGene', DirectGene)
-  .component('indirectGene', IndirectGene);
+  .component('indirectGene', IndirectGene)
+  .component('search', Search);
