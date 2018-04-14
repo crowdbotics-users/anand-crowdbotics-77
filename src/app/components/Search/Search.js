@@ -4,7 +4,7 @@ class SearchController {
   constructor($log, $state) {
     this.buttonRipple = COLORS.buttonRipple;
     $log.log('$state.params');
-    $log.log($state.params);
+    $log.log($state.current);
   }
 }
 

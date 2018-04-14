@@ -1,9 +1,10 @@
 
 class HeaderController {
   /** @ngInject */
-  constructor(authService, $state) {
+  constructor(authService, $state, $log) {
     this.authService = authService;
     this.$state = $state;
+    this.log = $log;
   }
 
   goBack() {

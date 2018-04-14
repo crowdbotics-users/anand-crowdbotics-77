@@ -43,8 +43,21 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
+      },
+      { test: /\.(eot|woff|woff2|svg|ttf|png)([\?]?.*)$/,
+        loader: "file-loader"
       }
     ]
+  },
+  resolveLoader: {
+    modules: [
+      "node_modules"
+    ]
+  },
+  resolve: {
+    modules: [path.resolve(__dirname, '/src'), 'node_modules/'],
+    descriptionFiles: ['package.json'],
+    extensions : ['.js', '.ts']
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),

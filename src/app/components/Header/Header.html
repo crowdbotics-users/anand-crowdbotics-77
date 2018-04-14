@@ -7,20 +7,21 @@
 
         <span flex></span>
         <div ng-if="$ctrl.authService.user">
-          <h3 class="right-item" ng-if="$ctrl.$state.current.url.indexOf('gene') > -1">
-            {{$ctrl.authService.user.email}}
-          </h3>
+          <div class="right-item" ng-if="$ctrl.$state.current.url.indexOf('gene') != -1">
+            <h3>{{$ctrl.authService.user.email}}</h3>
+          </div>
           <div ng-if="$ctrl.$state.current.url.indexOf('gene') == -1">
-            <md-button  class="boxes green">34</md-button >
-            <md-button  class="boxes red">56</md-button >
-            <md-button  class="boxes blue">23</md-button >
+            <md-button class="md-boxes boxes green">34</md-button >
+            <md-button class="md-boxes boxes red">56</md-button >
+            <md-button class="md-boxes boxes blue">23</md-button >
             <md-button class="button" aria-label="My Account">
               My Account
             </md-button>
-            <md-button class="boxes search">
-              <img src="../../../../assets/icons/search.svg" style="width: 20px;" />
+            <md-button class="boxes md-boxes search">
+              <img src="../../../../assets/icons/search.svg" class="md-icon" />
             </md-button >
           </div>
+        </div>
         </div>
 
       </div>

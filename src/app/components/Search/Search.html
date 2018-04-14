@@ -1,10 +1,40 @@
-<div class="home" layout="column" layout-align="center center">
-  <div class="title">
-    Indication Expansion
+<div class="home" layout="column" layout-align="start center">
+  <div>
+    <!--filter goes here -->
   </div>
-  <div layout="row" class="gene" layout-align="space-around">
-    <div>
-      <md-button ui-sref="direct" class="md-raised" md-ink-ripple="{{$ctrl.buttonRipple}}">Search Knowledge</md-button>
+  <div layout="row" layout-align="space-between" class="result" flex>
+    <div flex="70">
+      <md-list ng-cloak>
+
+        <md-list-item class="items" ng-repeat="topping in [{name: 'hey'}, {name: 'hey'}, {name: 'hey'}, {name: 'hey'}, {name: 'hey'}]">
+          <!-- Column # 1 -->
+          <div layout-align="center center">
+            <input class="sml-boxes boxes" type="check" disabled>
+            <md-button class="md-boxes boxes"><img class="md-icon boxes" src="../../../../assets/icons/bookmark.svg"></md-button>
+
+          </div>
+          <!-- Column # 2 -->
+          <div flex layout-align="start start">
+            <div class="lng-boxes boxes red">text 1</div>
+            <div class="lng-boxes boxes green">text 2</div>
+            <div class="lng-boxes boxes blue">text 3</div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate earum eius facilis hic id inventore iusto laudantium maiores modi neque nobis quaerat quisquam quod sapiente tenetur unde velit, voluptas voluptatem. </p>
+          </div>
+          <!-- Column # 3 -->
+          <div class="md-secondary">
+            <md-button class="sm-boxes boxes blue"><img class="sm-icon" src="../../../../assets/icons/question.svg"></md-button>
+            <md-button class="sm-boxes boxes green"><img class="sm-icon" src="../../../../assets/icons/tick.svg"></md-button>
+            <md-button class="sm-boxes boxes red"><img class="sm-icon" src="../../../../assets/icons/letter-x.svg"></md-button>
+            <md-button class="sm-boxes boxes"><img class="sm-icon" src="../../../../assets/icons/angle-arrow-down.svg"></md-button>
+          </div>
+          <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+      </md-list>
+    </div>
+
+    <!-- Right side filter-->
+    <div flex="30">
+      <md-slider flex md-discrete ng-model="$ctrl.rating1" step="1" min="1" max="5" aria-label="rating"></md-slider>
     </div>
   </div>
 </div>

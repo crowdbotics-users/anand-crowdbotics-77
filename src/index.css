@@ -30,29 +30,63 @@ body{
   color: dodgerblue;
 }
 
-.header .boxes{
-  width: 40px;
-  height: 40px;
+.boxes{
   border-radius: 5px;
   display: inline-block;
   text-align: center;
   min-height: 0;
   min-width: 0;
+  padding: 0;
+  line-height: inherit;
 }
 
-.header .boxes.green{
-  border: 2px solid green;
-  color: green;
+.md-boxes{
+  width: 40px;
+  height: 40px;
 }
 
-.header .boxes.red{
-  border: 2px solid red;
-  color: red;
+.sm-boxes{
+  width: 30px;
+  height: 30px;
+  display: block;
 }
 
-.header .boxes.blue{
-  border: 2px solid blue;
-  color: blue;
+.sml-boxes{
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 15px;
+}
+
+.lng-boxes{
+  width: 100px;
+  height: 22px;
+  margin: 0 4px;
+  line-height: 21px;
+}
+
+.boxes.green{
+  border: 2px solid #60F069;
+  color: #60F069;
+}
+
+.boxes.red{
+  border: 2px solid #D80027;
+  color: #D80027;
+}
+
+.boxes.blue{
+  border: 2px solid #5CA7D6;
+  color: #5CA7D6;
+}
+
+.md-icon{
+  width: 20px;
+}
+
+.sm-icon{
+  width: 16px;
+  padding-top: 4px;
 }
 
 .header .boxes.search{
@@ -201,6 +235,16 @@ body{
   font-weight: 400;
 }
 
+.home .result{
+  width: 100%;
+  font-weight: 400;
+  background-color: white;
+}
+
+.home .result .items{
+  padding: 10px;
+}
+
 .menu{
   background-color: white !important;
   overflow-y: hidden;
@@ -218,6 +262,7 @@ body{
 
 .home{
   height: 80vh;
+  margin-top: 30px;
 }
 
 .center{
