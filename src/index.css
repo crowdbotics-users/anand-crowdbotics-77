@@ -30,6 +30,11 @@ body{
   color: dodgerblue;
 }
 
+.top{
+  float: right;
+  transform: rotate(180deg);
+}
+
 .boxes{
   border-radius: 5px;
   display: inline-block;
@@ -241,8 +246,36 @@ body{
   background-color: white;
 }
 
+.home .result .list{
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 .home .result .items{
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
+}
+
+.home .result .items p{
+  font-size: 20px;
+}
+
+.home .result .description{
+  background-color: #f1f1f1;
+  color: #5CA7D6;
+  padding: 3px 20px 10px 40px;
+}
+
+.home .result .description *{
+  margin: 0;
+}
+
+.home .result .description h4{
+  margin: 7px 0;
+}
+
+
+.inline{
+  display: inline-block;
 }
 
 .menu{

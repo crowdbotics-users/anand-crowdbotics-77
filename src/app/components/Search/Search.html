@@ -1,40 +1,57 @@
-<div class="home" layout="column" layout-align="start center">
+<div id="search" class="home" layout="column" layout-align="start center">
   <div>
     <!--filter goes here -->
   </div>
   <div layout="row" layout-align="space-between" class="result" flex>
-    <div flex="70">
+    <div flex="70" class="list">
       <md-list ng-cloak>
+        <div ng-repeat="topping in [{name: 'hey'}, {name: 'hey'}, {name: 'hey'}, {name: 'hey'}, {name: 'hey'}]">
+          <md-list-item class="items">
+            <!-- Column # 1 -->
+            <div layout-align="center center">
+              <input class="sml-boxes boxes" type="check" disabled style="margin: auto;">
+              <md-button class="md-boxes boxes"><img class="md-icon boxes" src="../../../../assets/icons/bookmark.svg"></md-button>
+            </div>
+            <!-- Column # 2 -->
+            <div flex layout-align="start start">
+              <div class="lng-boxes boxes green">text 1</div>
+              <div class="lng-boxes boxes blue">text 2</div>
+              <div class="lng-boxes boxes red">text 3</div>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate earum eius facilis hic id inventore iusto laudantium maiores modi neque nobis quaerat quisquam quod sapiente tenetur unde velit, voluptas voluptatem. </p>
+            </div>
+            <!-- Column # 3 -->
+            <div class="md-secondary">
+              <md-button class="sm-boxes boxes blue"><img class="sm-icon" src="../../../../assets/icons/question.svg"></md-button>
+              <md-button class="sm-boxes boxes green"><img class="sm-icon" src="../../../../assets/icons/tick.svg"></md-button>
+              <md-button class="sm-boxes boxes red"><img class="sm-icon" src="../../../../assets/icons/letter-x.svg"></md-button>
+              <md-button class="sm-boxes boxes" ng-click="$ctrl.show($index)"><img class="sm-icon" src="../../../../assets/icons/angle-arrow-down.svg"></md-button>
 
-        <md-list-item class="items" ng-repeat="topping in [{name: 'hey'}, {name: 'hey'}, {name: 'hey'}, {name: 'hey'}, {name: 'hey'}]">
-          <!-- Column # 1 -->
-          <div layout-align="center center">
-            <input class="sml-boxes boxes" type="check" disabled>
-            <md-button class="md-boxes boxes"><img class="md-icon boxes" src="../../../../assets/icons/bookmark.svg"></md-button>
+            </div>
+            <md-divider></md-divider>
+          </md-list-item>
 
-          </div>
-          <!-- Column # 2 -->
-          <div flex layout-align="start start">
-            <div class="lng-boxes boxes red">text 1</div>
-            <div class="lng-boxes boxes green">text 2</div>
-            <div class="lng-boxes boxes blue">text 3</div>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate earum eius facilis hic id inventore iusto laudantium maiores modi neque nobis quaerat quisquam quod sapiente tenetur unde velit, voluptas voluptatem. </p>
-          </div>
-          <!-- Column # 3 -->
-          <div class="md-secondary">
-            <md-button class="sm-boxes boxes blue"><img class="sm-icon" src="../../../../assets/icons/question.svg"></md-button>
-            <md-button class="sm-boxes boxes green"><img class="sm-icon" src="../../../../assets/icons/tick.svg"></md-button>
-            <md-button class="sm-boxes boxes red"><img class="sm-icon" src="../../../../assets/icons/letter-x.svg"></md-button>
-            <md-button class="sm-boxes boxes"><img class="sm-icon" src="../../../../assets/icons/angle-arrow-down.svg"></md-button>
-          </div>
-          <md-divider ng-if="!$last"></md-divider>
-        </md-list-item>
+          <!-- Expanded Info -->
+          <md-list-item class="items description" ng-if="$ctrl.showDescription === $index">
+            <div flex="110">
+              <h4><u>Lorem ipsum dolor sit amet</u></h4>
+              <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa debitis eaque officiis optio similique tempore vel. Accusamus dicta, eaque earum est, iure laudantium odio reiciendis repudiandae sed veritatis voluptate. </h4>
+              <div>
+                <md-button class="inline sm-boxes boxes blue">A</md-button>
+                <md-button class="inline sm-boxes boxes blue"><img class="sm-icon" src="../../../../assets/icons/picture.svg"></md-button>
+                <md-button class="inline sm-boxes boxes blue"><img class="sm-icon" src="../../../../assets/icons/citation.svg"></md-button>
+              </div>
+            </div>
+            <div flex="10">
+              <md-button class="sm-boxes boxes top" ng-click="$ctrl.show()"><img class="sm-icon" src="../../../../assets/icons/angle-arrow-down.svg"></md-button>
+            </div>
+          </md-list-item>
+        </div>
       </md-list>
     </div>
 
     <!-- Right side filter-->
     <div flex="30">
-      <md-slider flex md-discrete ng-model="$ctrl.rating1" step="1" min="1" max="5" aria-label="rating"></md-slider>
+      <!--<md-slider flex md-discrete ng-model="$ctrl.rating1" step="1" min="1" max="5" aria-label="rating"></md-slider>-->
     </div>
   </div>
 </div>

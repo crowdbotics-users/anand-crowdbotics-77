@@ -1,10 +1,13 @@
 import {COLORS} from '../../constants/StylesConstants';
 
 class SearchController {
-  constructor($log, $state) {
+  constructor() {
     this.buttonRipple = COLORS.buttonRipple;
-    $log.log('$state.params');
-    $log.log($state.current);
+    this.showDescription = false;
+  }
+
+  show(index) {
+    this.showDescription = index;
   }
 }
 
