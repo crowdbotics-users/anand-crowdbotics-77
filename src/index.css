@@ -35,6 +35,12 @@ body{
   transform: rotate(180deg);
 }
 
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .boxes{
   border-radius: 5px;
   display: inline-block;
@@ -54,6 +60,7 @@ body{
   width: 30px;
   height: 30px;
   display: block;
+  min-width: 0;
 }
 
 .sml-boxes{
@@ -273,6 +280,39 @@ body{
   margin: 7px 0;
 }
 
+.md-panel {
+  left: 0 !important;
+  margin-top: 20px;
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+}
+
+.md-panel > div{
+  background-color: #f1f1f1;
+  padding: 30px;
+  border: 2px solid darkgray;
+}
+
+.md-panel .images{
+  background-color: #f1f1f1;
+  margin: 20px;
+  border: 2px solid darkgray;
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 230px;
+  overflow: hidden
+}
+
+.md-panel > div > div{
+  padding: 4px;
+  background-color: white;
+  max-height: 60vh;
+  overflow: hidden;
+  overflow-y: scroll
+}
 
 .inline{
   display: inline-block;

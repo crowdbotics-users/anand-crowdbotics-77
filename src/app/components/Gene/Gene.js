@@ -14,6 +14,13 @@ class DirectGeneController {
     this.genes = [{name: 'AADACL3'}, {name: 'AADACL4'}, {name: 'ACADM'}, {name: 'ACTL8'}, {name: 'ADGRL2'}, {name: 'ADPRHL2'}, {name: 'AMPD2'}, {name: 'ARID1A'}, {name: 'ATXN7L2'}, {name: 'AZIN2'}, {name: 'BCAS2'}, {name: 'BCL10'}];
     this.mechanisms = [{name: 'AADACL3'}, {name: 'AADACL4'}, {name: 'ACADM'}, {name: 'ACTL8'}, {name: 'ADGRL2'}, {name: 'ADPRHL2'}, {name: 'AMPD2'}, {name: 'ARID1A'}, {name: 'ATXN7L2'}, {name: 'AZIN2'}, {name: 'BCAS2'}, {name: 'BCL10'}];
     this.models = [{name: 'AADACL3'}, {name: 'AADACL4'}, {name: 'ACADM'}, {name: 'ACTL8'}, {name: 'ADGRL2'}, {name: 'ADPRHL2'}, {name: 'AMPD2'}, {name: 'ARID1A'}, {name: 'ATXN7L2'}, {name: 'AZIN2'}, {name: 'BCAS2'}, {name: 'BCL10'}];
+    this.result = 0;
+    this.total = 2987453;
+  }
+
+  onSelect() {
+    this.result = Math.round(Math.random() * 2987453);
+    this.progress = Math.round((this.result / this.total) * 100);
   }
 
   submit() {

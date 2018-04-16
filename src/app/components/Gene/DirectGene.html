@@ -5,7 +5,7 @@
 
       <md-input-container class="select">
         <label>Gene Name</label>
-        <md-select ng-model="$ctrl.selectedGene">
+        <md-select ng-model="$ctrl.selectedGene" ng-change="$ctrl.onSelect()">
           <md-option><em>None</em></md-option>
           <md-option ng-repeat="gene in $ctrl.genes" ng-value="gene.name">
             {{gene.name}}
@@ -15,7 +15,7 @@
 
       <md-input-container class="select">
         <label>Mechanism of Action</label>
-        <md-select ng-model="$ctrl.selectedMechanism">
+        <md-select ng-model="$ctrl.selectedMechanism" ng-change="$ctrl.onSelect()">
           <md-option><em>None</em></md-option>
           <md-option ng-repeat="mechanism in $ctrl.mechanisms" ng-value="mechanism.name">
             {{mechanism.name}}
@@ -25,7 +25,7 @@
 
       <md-input-container class="select">
         <label>Models</label>
-        <md-select ng-model="$ctrl.selectedModel">
+        <md-select ng-model="$ctrl.selectedModel" ng-change="$ctrl.onSelect()">
           <md-option><em>None</em></md-option>
           <md-option ng-repeat="model in $ctrl.models" ng-value="model.name">
             {{model.name}}
@@ -40,4 +40,8 @@
       </md-button>
     </md-card-footer>
   </md-card>
+  <div class="progress">
+    <p>{{$ctrl.result}} out of {{$ctrl.total}}</p>
+    <md-progress-linear md-mode="determinate" value="{{$ctrl.progress}}"></md-progress-linear>
+  </div>
 </div>

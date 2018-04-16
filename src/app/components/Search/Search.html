@@ -31,18 +31,20 @@
           </md-list-item>
 
           <!-- Expanded Info -->
-          <md-list-item class="items description" ng-if="$ctrl.showDescription === $index">
+          <md-list-item id="desc-{{$index}}" class="items description" ng-if="$ctrl.showDescription.includes($index)">
             <div flex="110">
               <h4><u>Lorem ipsum dolor sit amet</u></h4>
               <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa debitis eaque officiis optio similique tempore vel. Accusamus dicta, eaque earum est, iure laudantium odio reiciendis repudiandae sed veritatis voluptate. </h4>
               <div>
-                <md-button class="inline sm-boxes boxes blue">A</md-button>
-                <md-button class="inline sm-boxes boxes blue"><img class="sm-icon" src="../../../../assets/icons/picture.svg"></md-button>
+                <md-button class="inline sm-boxes boxes blue demo-menu-open-button-{{$index}}" ng-click="$ctrl.showMenu($event, $index, 'abstract')">A</md-button>
+                <md-button class="inline sm-boxes boxes blue demo-menu-open-button-{{$index}}" ng-click="$ctrl.showMenu($event, $index, 'images')">
+                  <img class="sm-icon" src="../../../../assets/icons/picture.svg">
+                </md-button>
                 <md-button class="inline sm-boxes boxes blue"><img class="sm-icon" src="../../../../assets/icons/citation.svg"></md-button>
               </div>
             </div>
             <div flex="10">
-              <md-button class="sm-boxes boxes top" ng-click="$ctrl.show()"><img class="sm-icon" src="../../../../assets/icons/angle-arrow-down.svg"></md-button>
+              <md-button class="sm-boxes boxes top" ng-click="$ctrl.hide($index)"><img class="sm-icon" src="../../../../assets/icons/angle-arrow-down.svg"></md-button>
             </div>
           </md-list-item>
         </div>
