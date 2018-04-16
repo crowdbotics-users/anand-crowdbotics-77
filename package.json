@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "8.9.1"
+  },
   "dependencies": {
     "@angular/router": "^0.2.0",
     "angular": "^1.6.2",
@@ -66,7 +69,8 @@
     "serve": "gulp serve",
     "serve:dist": "gulp serve:dist",
     "test": "gulp test",
-    "test:auto": "gulp test:auto"
+    "test:auto": "gulp test:auto",
+    "start": "gulp serve"
   },
   "eslintConfig": {
     "rules": {
