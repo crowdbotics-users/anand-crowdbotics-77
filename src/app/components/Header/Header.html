@@ -11,9 +11,9 @@
             <h3>{{$ctrl.authService.user.email}}</h3>
           </div>
           <div ng-if="$ctrl.$state.current.url.indexOf('gene') == -1">
-            <md-button class="md-boxes boxes green">34</md-button >
-            <md-button class="md-boxes boxes red">56</md-button >
-            <md-button class="md-boxes boxes blue">23</md-button >
+            <md-button class="md-boxes boxes green">{{$ctrl.bucketService.buckets["green"]}}</md-button >
+            <md-button class="md-boxes boxes red">{{$ctrl.bucketService.buckets["red"]}}</md-button >
+            <md-button class="md-boxes boxes blue">{{$ctrl.bucketService.buckets["blue"]}}</md-button >
             <md-button class="button" aria-label="My Account">
               My Account
             </md-button>

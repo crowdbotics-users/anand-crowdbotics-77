@@ -1,14 +1,14 @@
-<div class="home" layout="column" layout-align="center center">
+<div id="login" class="home" layout="column" layout-align="center center">
   <div class="title">
     Indication Expansion
   </div>
   <md-card layout-align="center center" class="card login">
     <md-card-content>
       <md-input-container md-no-float class="md-block">
-        <input type="email" ng-model="email" placeholder="Your email address">
+        <input type="email" ng-model="$ctrl.email" placeholder="Your email address">
       </md-input-container>
       <md-input-container md-no-float class="md-block">
-        <input type="password" ng-model="password" placeholder="Your password">
+        <input type="password" ng-model="$ctrl.password" placeholder="Your password">
       </md-input-container>
 
     </md-card-content>

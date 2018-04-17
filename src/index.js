@@ -2,6 +2,7 @@ import angular from 'angular';
 import 'todomvc-app-css/index.css';
 
 import {AuthService} from './app/services/AuthService';
+import {BucketService} from './app/services/BucketService';
 import {App} from './app/containers/App';
 import {Header} from './app/components/Header/Header';
 import {MainSection} from './app/components/MainSection/MainSection';
@@ -18,6 +19,7 @@ angular
   .module('app', ['ui.router', 'ngMaterial'])
   .config(routesConfig)
   .service('authService', AuthService)
+  .service('bucketService', BucketService)
   .component('app', App)
   .component('headerComponent', Header)
   .component('mainSection', MainSection)

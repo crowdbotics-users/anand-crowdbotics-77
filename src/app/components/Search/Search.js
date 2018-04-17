@@ -1,12 +1,13 @@
 import {COLORS} from '../../constants/StylesConstants';
 
 class SearchController {
-  constructor($mdPanel, $document, $log) {
+  constructor($mdPanel, $document, $log, bucketService) {
     this.buttonRipple = COLORS.buttonRipple;
     this.showDescription = [];
     this._mdPanel = $mdPanel;
     this.document = $document;
     this.$log = $log;
+    this.bucketService = bucketService;
   }
 
   show(index) {
@@ -24,6 +25,10 @@ class SearchController {
   closeMenu() {
     const myEl = angular.element(this.document[0].querySelector('.md-panel'));
     myEl.remove();
+  }
+
+  fillBucket(param) {
+    this.bucketService.buckets[param]++;
   }
 }
 

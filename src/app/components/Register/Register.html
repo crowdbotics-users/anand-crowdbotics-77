@@ -5,29 +5,29 @@
   <div class="register">
       <md-input-container class="md-block">
         <label>First name</label>
-        <input ng-model="firstName">
+        <input ng-model="$ctrl.firstName">
       </md-input-container>
       <md-input-container class="md-block">
         <label>Last name</label>
-        <input ng-model="lastName">
+        <input ng-model="$ctrl.lastName">
       </md-input-container>
       <md-input-container class="md-block">
         <label>Email address</label>
-        <input ng-model="email">
+        <input type="email" ng-model="$ctrl.email">
       </md-input-container>
       <md-input-container class="md-block">
         <label>Role in a company</label>
-        <input ng-model="role">
+        <input ng-model="$ctrl.role">
       </md-input-container>
       <md-input-container class="md-block">
         <label>Password</label>
-        <input ng-model="password">
+        <input type="password" ng-model="$ctrl.password">
       </md-input-container>
       <md-input-container class="md-block">
         <label>Confirm Password</label>
-        <input ng-model="confirm">
+        <input type="password" ng-model="$ctrl.confirm">
       </md-input-container>
-      <md-button class="md-raised" aria-label="Sign up" ui-sref="app">
+      <md-button class="md-raised" aria-label="Sign up" ng-click="$ctrl.register()">
         Sign up
       </md-button>
       <div class="pointer" ui-sref="app">

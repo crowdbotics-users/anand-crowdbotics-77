@@ -1,3 +1,4 @@
+import swal from 'sweetalert';
 
 class LoginController {
   constructor($state, authService) {
@@ -6,7 +7,14 @@ class LoginController {
   }
 
   login() {
-    this.authService.setUser({email: 'demo@domain.com'});
+    //const res = bioxplor_login(this.email, this.password);
+    //swal("Login", res, res == "error" ? "error" : "success");
+    //todo Remove below line and uncomment above after RPC connection
+    initIndicationView()
+  }
+
+  initIndicationView(){
+    this.authService.setUser({email: this.email});
     this.state.go('gene');
   }
 }
