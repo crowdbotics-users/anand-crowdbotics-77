@@ -7,7 +7,7 @@ In order to run the project
  npm run serve
 ```
 
-To deploy on Heroku environment
+To deploy on Heroku environment (https://bioxplor.herokuapp.com)
 ```
  Heroku login
  git add .
